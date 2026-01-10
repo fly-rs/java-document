@@ -1,5 +1,7 @@
 package first_week;
 
+import org.junit.Test;
+
 /**
  * ClassName: Day01
  * Package: first_week
@@ -12,5 +14,13 @@ package first_week;
 public class Day01 {
     public static void main(String[] args) {
         System.out.println("Hello World");
+    }
+
+
+    @Test
+    public void test(){
+        int i = 0;
+        i = i ++;
+        System.out.println(i);
     }
 }

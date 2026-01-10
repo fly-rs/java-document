@@ -18,30 +18,30 @@ public class Day04 {
     @Test
     public void testFindMaxValue(){
         int[] arr1 = new int[0];
-        System.out.println(-1 == findMaxValue(arr1));
+        assert (-1 == findMaxValue(arr1));
         int[] arr2 = null;
-        System.out.println(-1 == findMaxValue(arr2));
+        assert (-1 == findMaxValue(arr2));
         int[] arr3 = {1, 5, 6, 2, 8, 7, 1, 0};
-        System.out.println(8 == findMaxValue(arr3));
+        assert (8 == findMaxValue(arr3));
         int[] arr4 = new int[2];
-        System.out.println(0 == findMaxValue(arr4));
+        assert (0 == findMaxValue(arr4));
     }
 
     @Test
     public void testFindMaxValueT(){
         String[] arr1 = new String[0];
-        System.out.println(null == findMaxValue(arr1, String::compareTo));
-        String[] arr2 = null;
-        System.out.println(null == findMaxValue(arr2, String::compareTo));
-        String[] arr3 = {"1", "3", "5", "a", ".", ";", "zhang"};
-        System.out.println("zhang".equals(findMaxValue(arr3, String::compareTo)));
-        String[] arr4 = {"1", null, ".", ";", "zhang", null};
-        System.out.println("zhang".equals(findMaxValue(arr4, String::compareTo)));
-        String[] arr5 = {null, null};
-        System.out.println(null == findMaxValue(arr5, String::compareTo));
-        String[] arr6 = {"1"};
-        System.out.println("1".equals(findMaxValue(arr6, String::compareTo)));
+        assert(null == findMaxValue(arr1, String::compareTo));
 
+        String[] arr2 = null;
+        assert (null == findMaxValue(arr2, String::compareTo));
+        String[] arr3 = {"1", "3", "5", "a", ".", ";", "zhang"};
+        assert ("zhang".equals(findMaxValue(arr3, String::compareTo)));
+        String[] arr4 = {"1", null, ".", ";", "zhang", null};
+        assert ("zhang".equals(findMaxValue(arr4, String::compareTo)));
+        String[] arr5 = {null, null};
+        assert (null == findMaxValue(arr5, String::compareTo));
+        String[] arr6 = {"1"};
+        assert ("1".equals(findMaxValue(arr6, String::compareTo)));
     }
 
     public int findMaxValue(int[] arr) {
